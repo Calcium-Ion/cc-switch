@@ -175,7 +175,6 @@ export function ProviderPresetSelector({
             );
           });
         })}
-
       </div>
 
       {/* 统一供应商预设（新的一行） */}
@@ -189,7 +188,8 @@ export function ProviderPresetSelector({
                 onClick={() => onUniversalPresetSelect(preset)}
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors bg-accent text-muted-foreground hover:bg-accent/80 relative"
                 title={t("universalProvider.hint", {
-                  defaultValue: "跨应用统一配置，自动同步到 Claude/Codex/Gemini",
+                  defaultValue:
+                    "跨应用统一配置，自动同步到 Claude/Codex/Gemini",
                 })}
               >
                 <ProviderIcon icon={preset.icon} name={preset.name} size={14} />
