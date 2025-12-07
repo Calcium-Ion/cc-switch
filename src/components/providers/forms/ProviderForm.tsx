@@ -74,6 +74,7 @@ interface ProviderFormProps {
   onSubmit: (values: ProviderFormValues) => void;
   onCancel: () => void;
   onUniversalPresetSelect?: (preset: UniversalProviderPreset) => void;
+  onManageUniversalProviders?: () => void;
   initialData?: {
     name?: string;
     websiteUrl?: string;
@@ -94,6 +95,7 @@ export function ProviderForm({
   onSubmit,
   onCancel,
   onUniversalPresetSelect,
+  onManageUniversalProviders,
   initialData,
   showButtons = true,
 }: ProviderFormProps) {
@@ -757,6 +759,7 @@ export function ProviderForm({
             presetCategoryLabels={presetCategoryLabels}
             onPresetChange={handlePresetChange}
             onUniversalPresetSelect={onUniversalPresetSelect}
+            onManageUniversalProviders={onManageUniversalProviders}
             category={category}
           />
         )}
